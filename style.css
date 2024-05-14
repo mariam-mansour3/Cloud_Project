@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.box{
+    width: 33.33%;
+    height: 200px;
+    float: left;
+    box-sizing: border-box;
+}
+#box{
+    border: 1px solid;
+    padding:0.1px;
+background-color: rgb(26, 26, 113);
+}
+body{
+    font-family: "Quicksand",sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    padding: 0 10px;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: black;
+}
+a:hover:after{
+    width: 100%;
+}
+/* utility classes*/
+.primary-text{
+    color: blue;
+    
+}
+.btn{
+    display: inline-block;
+    padding: 40px 40px;
+    border:none;
+    border-radius: 100px;
+}
+
+/* Header Start */
+header{
+   height: 100vh;
+    background: url('./home.png') center center/cover no-repeat;
+    position:relative;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    margin: auto;
+}
+#navbar img{
+    width:80px;
+   margin-left: 70px;
+}
+#navbar ul {
+    display: flex;
+    margin-right: 100px;
+
+}
+#navbar ul li a {
+padding: 15px 20px;
+color: #fff;;
+font-weight:700;
+}
+#navbar ul li a :hover{
+    border-bottom: 2px solid black;
+}
+header.content {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 75%;
+}
+header.content h1{
+    font-size: 80px;
+    
+}
+header.content p{
+    margin: 70px 0 300px;
+    color: blue;
+}
+header *{
+    z-index: 10;
+}
+/* Header End*/
+#footer{
+    background: black;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+#footer a{
+    color: #fff;
+}

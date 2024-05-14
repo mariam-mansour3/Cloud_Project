@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db2: 
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=project cloud testing
+      - MYSQL_USER=php_docker
+      - MYSQL_PASSWORD=password
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1 
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d" 
+
+  www2:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/var/www/html" 
+    ports:
+      - 8080:80
+
+  phpmyadmin2:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8002:80
+    environment:
+      - PMA_HOST=db2
+      - PMA_PORT=3306
